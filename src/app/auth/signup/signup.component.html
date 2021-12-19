@@ -1,0 +1,142 @@
+<div class="main-body">
+    <div class="title-body">
+        <div>
+            <p class="page-title"> Welcome to <br> our Community</p>
+        </div>
+        <div>
+            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi magni officiis at asperiores optio ducimus veritatis voluptatum pariatur veniam temporibus fuga dolorem aliquam qui incidunt est.</p>
+        </div>
+        <div>
+            <img src="/assets/profile.png" class="avatar">
+            <img src="/assets/man.png" class="avatar1">
+            <img src="/assets/profile.png" class="avatar1">
+            <img src="/assets/man.png" class="avatar1">
+            <label style="    font-size: 12px;
+        color: #c5c0c0;">More than 17 pepole joined us</label>
+        </div>
+    </div>
+    <div class="sub-body">
+        <div class="sub-bdy-padding">
+            <img src="/assets/42527.svg" style="width: 40px;">
+
+
+            <div>
+                <p class="signup-title">
+                    Sign up
+                </p>
+                <p>already have a account ? <a routerLink="/Signin">Signup</a></p>
+
+                <div>
+                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm)">
+
+
+                        <!-- Full Name: -->
+
+                        <div class="abc">
+                            <label class="input-title">
+              Full Name:
+            </label>
+                            <br>
+                            <input type="text" class="input-body" formControlName="fullname">
+                            <div *ngIf="f.fullname && f.fullname.errors && (f.fullname.dirty || f.fullname.touched || submitted)" style="color: red; font-size: 11px">
+                                <span *ngIf="  f.fullname.errors.required">
+                Full Name is Required
+              </span>
+                                <span *ngIf=" f.fullname.errors.minlength">
+                Please enter a Full name at least 4 characters.
+              </span>
+
+
+                            </div>
+                        </div>
+
+
+                        <!-- Email address : -->
+
+
+                        <div class="abc">
+                            <label class="input-title">
+              Email address :
+            </label>
+                            <br>
+                            <input type="email" class="input-body" formControlName="email">
+                            <div *ngIf="f.email && f.email.errors && (f.email.dirty || f.email.touched || submitted)" style="color: red; font-size: 11px">
+                                <span *ngIf="  f.email.errors.required">
+                email is Required
+              </span>
+                                <span *ngIf=" f.email.errors.pattern">
+                Email should be correct parten
+              </span>
+
+
+                            </div>
+                        </div>
+
+                        <!-- Password * -->
+
+                        <div class="abc">
+                            <label class="input-title">
+              Password *
+            </label>
+                            <br>
+                            <input type="text" class="input-body" formControlName="password">
+                            <div *ngIf="f.password && f.password.errors && (f.password.dirty || f.password.touched || submitted)" style="color: red; font-size: 11px">
+                                <span *ngIf="  f.password.errors.required">
+                Password is Required
+              </span>
+                                <span *ngIf=" f.password.errors.minlength">
+                Please enter a Password at least 4 characters.
+              </span>
+
+
+                            </div>
+                        </div>
+
+
+                        <!-- Company Name * -->
+
+
+
+                        <div class="abc">
+
+
+                            <label class="input-title">
+              Phone Number  *
+            </label>
+                            <br>
+                            <input type="text" class="input-body" formControlName="phoneNumber">
+                            <div *ngIf="f.phoneNumber && f.phoneNumber.errors && (f.phoneNumber.dirty || f.phoneNumber.touched || submitted)" style="color: red; font-size: 11px">
+                                <span *ngIf="  f.phoneNumber.errors.required">
+                Phone number is Required
+              </span>
+                                <span *ngIf=" f.phoneNumber.errors.minlength">
+                Please enter a phone Number  10 characters.
+              </span>
+
+
+                            </div>
+                        </div>
+
+                        <div style="    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    padding: 0vw 0.3vw;">
+                            <div style="    display: flex;">
+                                <input type="checkbox" style="margin-top: 7px;" formControlName="checkValue">
+                                <label style="margin : 0; padding-left: 1vw;">I agree to Terems of Service and privacy policy </label>
+                            </div>
+                        </div>
+
+
+                        <div class="btn-create-body">
+                            <Button color="primary" class="btn-create" type="submit" [disabled]="registerForm?.invalid">Create your free account</Button>
+                        </div>
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

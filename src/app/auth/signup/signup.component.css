@@ -1,0 +1,16 @@
+.sub-bdy-padding {
+    padding: 40px 62px 0;
+}
+
+.btn-create {
+    width: 70%;
+    border-radius: 1vw;
+    background-color: rgb(0 0 255 / 75%);
+    color: white;
+    padding: 0.5vw;
+}
+
+.btn-create-body {
+    text-align: center;
+    padding-top: 4vh;
+}

@@ -1,0 +1,49 @@
+.horizental-line {
+    display: flex;
+    flex-direction: row;
+}
+
+.horizental-line:before,
+.horizental-line:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid;
+    margin: auto;
+}
+
+.horizental-line:before {
+    margin-right: 10px
+}
+
+h1:after {
+    margin-left: 10px
+}
+
+.sub-bdy-padding {
+    padding: 86px 62px 0;
+}
+
+.check-box-body {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1vw 0.5vw;
+}
+
+.check-title {
+    display: flex;
+    align-items: center;
+}
+
+.title-check-box {
+    margin: 0;
+    padding-left: 1vw;
+}
+
+.btn {
+    width: 70%;
+    border-radius: 1vw;
+    background-color: rgb(0 0 255 / 75%);
+    color: white;
+    padding: 0.5vw;
+}
