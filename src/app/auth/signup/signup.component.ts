@@ -62,14 +62,7 @@ export class SignupComponent implements OnInit {
           this.router.navigate(['/Signin'])
 
         }
-        if (resp.status === 500) {
-          if (resp.error === 'auth/email-already-exists') {
-          }
-          if (resp.error === 'auth/phone-number-already-exists') {
-          }
-          if (resp.error === 'auth/invalid-phone-number') {
-          }
-        }
+
       },
       (err: any) => {}
     );
